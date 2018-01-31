@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use('/',index);
 app.use('/api',tasks);
 
-app.set('port','3000');
+app.set('port',process.env.PORT||3000);
 app.listen(app.get('port'),()=>{
     console.log('Server started at '+app.get('port'));
 });
