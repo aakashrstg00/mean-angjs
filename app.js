@@ -17,12 +17,12 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use(function(req,res){
-    res.sendFile(path.join(__dirname, '/views/index.html'));
-});
-
 app.use('/',index);
 app.use('/api',tasks);
+
+app.use('*',function(req,res){
+    res.sendFile(path.join(__dirname, '/views/index.html'));
+});
 
 app.set('port',process.env.PORT||3000);
 app.listen(app.get('port'),()=>{

@@ -4,7 +4,7 @@ var mongojs = require('mongojs');
 var db = mongojs('mongodb://rastogi:rastogi@ds163016.mlab.com:63016/mytasklist_rastogi',['tasks']);
 
 router.get('/tasks',(req,res,next)=>{
-    db.tasks.find((err,tasks)=>{
+    db.tasks.find().sort({isDone:1, _id:-1},(err,tasks)=>{
         if(err){
             next(err);
         }
