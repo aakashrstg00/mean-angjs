@@ -38,7 +38,7 @@
         <div class="card my-2" ng-repeat="task in tasks">
             <div class="card-block row">
                 <div class="col-sm-1">
-                    <input type="checkbox" style="width:40px; height:40px;" ng-checked="task.isDone" ng-click="updateStatus(task)">
+                    <input type="checkbox" style="transform: scale(2); margin: 10px;" ng-checked="task.isDone" ng-click="updateStatus(task)">
                 </div>
                 <div class="col-sm-10" ng-class="{grey: task.isDone}" style="padding-top:4px;">{{task.title}}</div>
                 <div class="col-sm-1">
