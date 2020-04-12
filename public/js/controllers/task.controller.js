@@ -20,6 +20,7 @@ app.controller("TaskController", function ($scope, $timeout, TaskService) {
             $scope.taskAdded = true;
             console.log($scope.tasks);
             $scope.loadTasks();
+            $scope.title="";
             $timeout(function () {
                 $scope.taskAdded = false;
             }, 3000);

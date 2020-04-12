@@ -33,6 +33,7 @@
         </div>
     </form>
     <div class="alert alert-success" ng-show="taskAdded">Task Added Successfully!</div>
+    <div class="alert alert-warning" ng-show="taskDeleted">Task Deleted Successfully!</div>
     <div class="task-list mt-3">
         <div class="card my-2" ng-repeat="task in tasks">
             <div class="card-block row">
@@ -45,6 +46,5 @@
                 </div>
             </div>
         </div>
-        <div class="alert alert-success" ng-show="taskDeleted">Task Deleted Successfully!</div>
     </div>
 </div>
